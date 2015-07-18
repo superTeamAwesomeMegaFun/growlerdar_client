@@ -1,6 +1,10 @@
 var React = require('react');
 var request = require('superagent');
 var App = require('./components/app.jsx');
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
 
 React.render(<App />, document.body);
 
