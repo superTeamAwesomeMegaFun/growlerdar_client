@@ -1,7 +1,7 @@
 var React = require('react');
 var request = require('superagent');
 
-var DataTableSearchBar = module.exports = exports = React.createClass({
+var DataTableSearchBar = exports.DataTableSearchBar = React.createClass({
   handleChange: function() {
     this.props.onUserInput(
       this.refs.filterTextInput.getDOMNode().value
@@ -35,7 +35,7 @@ var DataTableMetaList = module.exports = exports = React.createClass({
   }
 });
 
-var DataTableAddEntry = module.exports = exports = React.createClass({
+var DataTableAddEntry = exports.DataTableAddEntry = React.createClass({
   render: function() {
     return (
     	<div id="addLocation">
@@ -85,7 +85,7 @@ var DataTableLocationRow = module.exports = exports = React.createClass({
   }
 });
 
-var DataTableLocationTable = module.exports = exports = React.createClass({ 
+var DataTableLocationTable = exports.DataTableLocationTable = React.createClass({ 
   render: function() {
     var filterText = this.props.filterText;
     var locationNodes = this.props.locations.map(function(location) {
@@ -96,8 +96,7 @@ var DataTableLocationTable = module.exports = exports = React.createClass({
         );
       }
     });
-
-    return (
+return (
       <table className="table-full-width" id={this.props.tableType}>
         <thead>
           <tr>
@@ -117,7 +116,7 @@ var DataTableLocationTable = module.exports = exports = React.createClass({
   }
 });
 
-var FilterableDataTable = module.exports = exports = React.createClass({
+var FilterableDataTable =  exports.FilterableDataTable = React.createClass({
   loadLocations: function() {
   	request
 	  .get('http://localhost:4000/api/locations')
