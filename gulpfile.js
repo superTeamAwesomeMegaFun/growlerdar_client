@@ -11,7 +11,8 @@ gulp.task('webpackdev', function() {
         loaders: [
           {test: /\.jsx$/, loader: 'jsx-loader'}
         ] 
-      }
+      },
+      watch: true
     }))
     .pipe(gulp.dest('dist/'));
 });
@@ -21,4 +22,5 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', ['webpackdev', 'copy']);
+gulp.task('build', ['copy', 'webpackdev']);
+gulp.task('default', ['build']);
