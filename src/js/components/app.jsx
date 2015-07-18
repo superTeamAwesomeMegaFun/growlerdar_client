@@ -1,7 +1,13 @@
 var React = require('react');
+var FilterableDataTable = require('./data-table.jsx');
 
 var App = module.exports = exports = React.createClass({
   render: function() {
-    return (<h1>Growlerdar app yo!</h1>);
+    return (
+    	<main>
+    		<h1>Growlerdar app yo!</h1>
+    		<FilterableDataTable data="/api/locations" />
+    	</main>
+   	);
   }
 });
