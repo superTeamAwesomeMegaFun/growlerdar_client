@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var webpack = require('gulp-webpack');
 
 gulp.task('webpackdev', function() {
-  return gulp.src('src/js/entry.js')
+  return gulp.src('src/js/main.jsx')
     .pipe(webpack({
       output: {
         filename: 'bundle.js'
