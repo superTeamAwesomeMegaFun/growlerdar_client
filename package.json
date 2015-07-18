@@ -4,7 +4,7 @@
   "description": "the client for growlerdar",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/mocha/bin/mocha",
     "start": "echo 'remember to run npm build\n' && node server",
     "build": "./node_modules/gulp/bin/gulp.js"
   },
@@ -14,6 +14,7 @@
     "gulp": "^3.9.0",
     "gulp-webpack": "^1.5.0",
     "jsx-loader": "^0.13.2",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "mocha": "^2.2.5"
   }
 }
